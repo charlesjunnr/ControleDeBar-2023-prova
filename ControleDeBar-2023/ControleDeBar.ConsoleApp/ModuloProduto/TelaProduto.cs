@@ -21,7 +21,7 @@ namespace ControleDeBar.ConsoleApp.ModuloProduto
 
         protected override void MostrarTabela(ArrayList registros)
         {
-            MostrarCabecalho("Bar do Jão - Cardápio", "Visualização de produtos");
+            MostrarCabecalho("Bar do Jão - Cardápio");
 
             Console.WriteLine("{0, -5} | {1, -10} | {2, -10} ", "Id", "Nome", "Valor");
             Console.WriteLine(" ---------------------------------------- ");
@@ -34,7 +34,7 @@ namespace ControleDeBar.ConsoleApp.ModuloProduto
 
         protected override EntidadeBase ObterRegistro()
         {
-            MostrarCabecalho("Registro de novos produtos", "Registrando produto...");
+            MostrarCabecalho("Bar do Jão - Registrar novos produtos");
             
 
             Console.Write("Digite o nome do produto: ");

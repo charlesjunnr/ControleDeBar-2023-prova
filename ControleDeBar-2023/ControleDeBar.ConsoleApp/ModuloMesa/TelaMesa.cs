@@ -19,7 +19,7 @@ namespace ControleDeBar.ConsoleApp.ModuloMesa
 
         protected override void MostrarTabela(ArrayList registros)
         {
-            MostrarCabecalho("Bar do Jão", "Visualizando Mesas: ");
+            MostrarCabecalho("Bar do Jão - Visualizando Mesas: ");
             Console.WriteLine("{0,-5} | {1, -10} | {2, -15} | {3, -20} |", "Id", "Mesa", "Localização", "Status");
 
             string mensagem;
@@ -46,14 +46,14 @@ namespace ControleDeBar.ConsoleApp.ModuloMesa
 
         protected override EntidadeBase ObterRegistro()
         {
-            MostrarCabecalho("Bar do Jão - Mesas", "Inserir mesa");
+            MostrarCabecalho("Bar do Jão - Inserir mesa");
 
             Console.Write("Número da mesa: ");
             int numero = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Localização: ");
-            string localizacao = Console.ReadLine();
-
+            string localizacao = Console.ReadLine().ToUpper(); ;
+            
             Console.Write("Quantidade de Lugares: ");
             int quantidadeLugares = Convert.ToInt32(Console.ReadLine());
 
@@ -61,8 +61,6 @@ namespace ControleDeBar.ConsoleApp.ModuloMesa
 
             return new Mesa(numero, localizacao, quantidadeLugares, estaDisponivel);
         }
-
-
 
         private bool ReservarMesaNoCadastro(string opcao, bool estaDisponivel)
         {

@@ -8,7 +8,7 @@ namespace ControleDeBar.ConsoleApp.Compartilhado
 
         public abstract void AtualizarInformacoes(EntidadeBase registroAtualizado);
 
-        //public abstract ArrayList Validar();
-        
+        public abstract ArrayList Validar();
+
     }
 }

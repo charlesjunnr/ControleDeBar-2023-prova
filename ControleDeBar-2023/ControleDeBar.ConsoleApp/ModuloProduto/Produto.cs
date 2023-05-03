@@ -27,9 +27,23 @@ namespace ControleDeBar.ConsoleApp.ModuloProduto
             valor = produtoAtualizado.valor;
         }
 
-        //public override ArrayList Validar()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public override ArrayList Validar()
+        {
+            ArrayList erros = new ArrayList();
+
+            if (string.IsNullOrEmpty(nome) && string.IsNullOrWhiteSpace(nome))
+            {
+                erros.Add("É obrigatório preencher o nome!");
+            }
+            if (nome.Length < 3)
+            {
+                erros.Add("Escreva um nome maior que três caracteres!");
+            }
+            if (valor <= 0)
+            {
+                erros.Add("Tá distribuindo? Coloque um valor acima de 0!");
+            }
+            return erros;
+        }
     }
 }
